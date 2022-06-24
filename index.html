@@ -45,7 +45,7 @@
     </header>
     <main class="main-container main-index">
       <div class="page-container">
-        <h1>Sedona</h1>
+        <h1 class="visually-hidden">Sedona</h1>
         <img class="logo" src="./images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепную Седону">
         <p class="main-title">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</p>
@@ -54,9 +54,11 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <ol class="advantages-list">
             <li class="advantages-item advantages-city">
-              <h3 class="advantages-title">Настоящий городок</h3>
-              <p class="advantages-number">— №1 —</p>
-              <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <div class="advantages-city-container">
+                <h3 class="advantages-title advantages-city-title">Настоящий городок</h3>
+                <p class="advantages-number advantages-city-number">— №1 —</p>
+                <p class="advantages-description advantages-city-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
               <img class="image-city" src="./images/city_sedona.jpg" width="800" height="384" alt="Sedona">
               <ul class="advantages-list-unsorted">
                 <li class="advantages-item-unsorted advantages-housing">
@@ -78,10 +80,12 @@
             </li>
             <li class="advantages-item advantages-bridge">
               <img class="image-bridge" src="./images/devil's_bridge.jpg" width="800" height="384" alt="Devil's bridge">
-                <h3 class="advantages-title">Там есть
+              <div class="advantages-bridge-container">
+                <h3 class="advantages-title advantages-bridge-title">Там есть
                   мост дьявола</h3>
-                <p class="advantages-number">— №2 —</p>
-                <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                <p class="advantages-number advantages-bridge-number">— №2 —</p>
+                <p class="advantages-description advantages-bridge-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
             </li>
             <li class="advantages-item advantages-square">
               <h3 class="advantages-title">Небольшая
@@ -145,9 +149,7 @@
         </ul>
         <section class="footer-contacts">
           <h2 class="visually-hidden">Телефон</h2>
-          <address class="footer-contacts-address">
             <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </address>
         </section>
         <div class="about-htmlacademy">
           <a class="htmlacademy-link" href="https://htmlacademy.ru/">
