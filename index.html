@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="./favicon.ico">
   </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" src="./images/logo_sedona.svg" width="139" height="70" alt="Логотип Седоны">
+          <img class="page-header-logo" src="./images/logo_sedona.svg" width="139" height="70" alt="Логотип Седоны.">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -35,7 +36,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button navigation-button" href="#">Хочу сюда!</a>
+            <button class="button navigation-button">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
@@ -44,7 +45,7 @@
       <div class="page-container">
         <div class="page-main-logo">
           <h1 class="visually-hidden">Sedona</h1>
-          <img class="logo" src="./images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепную Седону">
+          <img class="logo" src="./images/welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепную Седону.">
         </div>
         <section class="advantages">
           <header class="advantages-header">
@@ -59,11 +60,11 @@
                 <p class="advantages-number advantages-city-number">— №1 —</p>
                 <p class="advantages-description advantages-city-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="image-city" src="./images/city_sedona.jpg" width="800" height="384" alt="Sedona">
+              <img class="image-city" src="./images/city_sedona.jpg" width="800" height="384" alt="Sedona.">
               <ul class="advantages-list-unsorted">
                 <li class="advantages-item-unsorted advantages-housing">
                   <h3 class="advantages-title-unsorted">Жильё</h3>
-                  <p class="advantages-description-unsorted">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
+                  <p class="advantages-description-unsorted description-housing">Рекомендуем пожить<br> в настоящем мотеле, всё как в кино!</p>
                 </li>
                 <li class="advantages-item-unsorted advantages-food">
                   <h3 class="advantages-title-unsorted">Еда</h3>
@@ -76,7 +77,7 @@
               </ul>
             </li>
             <li class="advantages-item advantages-bridge">
-              <img class="image-bridge" src="./images/devil's_bridge.jpg" width="800" height="384" alt="Devil's bridge">
+              <img class="image-bridge" src="./images/devil's_bridge.jpg" width="800" height="384" alt="Devil's bridge.">
               <div class="advantages-bridge-container">
                 <h3 class="advantages-title advantages-bridge-title">Там есть<br> мост дьявола</h3>
                 <p class="advantages-number advantages-bridge-number">— №2 —</p>
@@ -104,7 +105,7 @@
           <h2 class="search-title">Заинтересовались?</h2>
           <p class="search-subtitle">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a class="button search-button" href="#">Поиск гостиницы в Седоне</a>
+          <button class="button search-button">Поиск гостиницы в Седоне</button>
         </section>
         <section class="newsletter">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
@@ -162,7 +163,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-container-close">
+    <div class="modal-container">
       <div class="modal modal-search-hotel">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -170,25 +171,54 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group data-group">
+            <p class="field-group arrival">
               <label class="field-title" for="arrival-date">Дата заезда:</label>
-              <input class="search-form-field" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020">
+              <input class="search-form-field" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020" required>
+              <button class="modal-icon-calendar" type="button">
+                <span class="visually-hidden">Календарь</span>
+              </button>
             </p>
-            <p class="field-group data-group">
+            <p class="field-group departure">
               <label class="field-title" for="departure-date">Дата выезда:</label>
-              <input class="search-form-field" type="text" id="departure-date" name="departure-date" placeholder="1 сентября 2021">
+              <input class="search-form-field" type="text" id="departure-date" name="departure-date" placeholder="1 сентября 2021" required>
+              <button class="modal-icon-calendar" type="button">
+                <span class="visually-hidden">Календарь</span>
+              </button>
             </p>
             <p class="field-group adults-group">
-              <label class="field-title" for="adults">Взрослые:</label>
-              <input class="count-field" type="number" id="adults" name="adults" placeholder="2">
+              <label class="field-title adults-title" for="adults">Взрослые:</label>
+              <button class="modal-button adults-reduce" type="button">
+                <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0v1h13V0H0Z"/>
+                </svg>
+                <span class="visually-hidden">Убавить</span>
+              </button>
+              <input class="count-field" type="number" id="adults" name="adults" placeholder="2" required>
+              <button class="modal-button adults-add" type="button">
+                <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                </svg>
+                <span class="visually-hidden">Прибавить</span>
+              </button>
             </p>
             <p class="field-group children-group">
-              <label class="field-title children-title" for="children">Дети:
-                <span class="modal-info">
-                  <span class="visually-hidden">Информация</span>
-                </span>
-              </label>
-              <input class="count-field" type="number" id="children" name="children" placeholder="1">
+              <label class="field-title children-title" for="children">Дети:</label>
+              <button class="modal-info" type="button">
+                <span class="visually-hidden">Информация</span>
+              </button>
+              <button class="modal-button children-reduce" type="button">
+                <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0v1h13V0H0Z"/>
+                </svg>
+                <span class="visually-hidden">Убавить</span>
+              </button>
+              <input class="count-field" type="number" id="children" name="children" placeholder="1" required>
+              <button class="modal-button children-add" type="button">
+                <svg class="modal-icon" aria-hidden="true" focusable="false" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                </svg>
+                <span class="visually-hidden">Прибавить</span>
+              </button>
             </p>
             <button class="modal-search-button button-second" type="submit">Найти</button>
           </form>
